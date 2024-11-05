@@ -2,7 +2,7 @@
 
 ## What idea(s) do you have for your final project?
 
-I want to make a game using pygame. I'm not sure which specific game yet
+we want to make a game using pygame. We want to choose it from the following options : Wormy, Tertis, breakout, ballspace
 
 
 ## If you plan to collaborate with one or two classmates, what are their names?
