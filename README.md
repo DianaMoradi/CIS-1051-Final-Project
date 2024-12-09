@@ -5,9 +5,9 @@ from sprites import Player, Ball, Block, Upgrade, Projectile
 from surfacemaker import SurfaceMaker
 from random import choice, randint
 
-class Game:
+class YGame:
 	def __init__(self):
-		
+
 		# general setup
 		pygame.init()
 		self.display_surface = pygame.display.set_mode((WINDOW_WIDTH,WINDOW_HEIGHT))
@@ -109,7 +109,7 @@ class Game:
 	def run(self):
 		last_time = time.time()
 		while True:
-			
+
 			# delta time
 			dt = time.time() - last_time
 			last_time = time.time()
@@ -118,7 +118,6 @@ class Game:
 			for event in pygame.event.get():
 				if event.type == pygame.QUIT or self.player.hearts <= 0:
 					pygame.quit()
-					game_over_text= Font.render("Game Over", True (200,200,200))
 					sys.exit()
 				if event.type == pygame.KEYDOWN:
 					if event.key == pygame.K_SPACE:
@@ -130,7 +129,7 @@ class Game:
 
 			# draw bg
 			self.display_surface.blit(self.bg,(0,0))
-			
+
 			# update the game
 			self.all_sprites.update(dt)
 			self.upgrade_collision()
@@ -166,5 +165,6 @@ class CRT:
 		self.display_surface.blit(self.scaled_vignette,(0,0))
 
 if __name__ == '__main__':
-	game = Game()
+	game = YGame()
 	game.run()
+
